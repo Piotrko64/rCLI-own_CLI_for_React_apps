@@ -1,0 +1,18 @@
+{
+    "name": "rcli",
+    "version": "1.0.0",
+    "description": "A CLI tool to translate language in the terminal.",
+    "main": "bin/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Manav Shrivastava",
+    "license": "ISC",
+    "keywords": [
+        "cli"
+    ],
+    "bin": {
+        "rcli": "./bin/index.js"
+    },
+    "dependencies": {}
+}
