@@ -14,5 +14,9 @@
     "bin": {
         "rcli": "./bin/index.js"
     },
-    "dependencies": {}
+    "dependencies": {
+        "boxen": "4.2.0",
+        "chalk": "4.0.0",
+        "figlet": "^1.6.0"
+    }
 }

@@ -1,3 +1,20 @@
 #! /usr/bin/env node
 
-console.log(123);
+const figlet = require("figlet");
+const chalk = require("chalk");
+const boxen = require("boxen");
+
+figlet("rCLI", (err, data) => {
+    if (err) {
+        console.log(err);
+    }
+    console.log(
+        boxen(chalk.hex("#0F5FFA")(data), {
+            padding: 1,
+            margin: 1,
+            borderStyle: "double",
+            borderColor: "#0F5FFA",
+        })
+    );
+    console.log(chalk.hex("#0F5FFA")("=== by Piotr Kołodziejczyk (Front Flex) ==="));
+});
