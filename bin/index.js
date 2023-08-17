@@ -1,20 +1,26 @@
 #! /usr/bin/env node
 
-const figlet = require("figlet");
-const chalk = require("chalk");
-const boxen = require("boxen");
+const { displayRcliLogo } = require("./helpers/displayRcliLogo");
+const fs = require("fs");
+const path = require("path");
 
-figlet("rCLI", (err, data) => {
-    if (err) {
-        console.log(err);
-    }
-    console.log(
-        boxen(chalk.hex("#0F5FFA")(data), {
-            padding: 1,
-            margin: 1,
-            borderStyle: "double",
-            borderColor: "#0F5FFA",
-        })
-    );
-    console.log(chalk.hex("#0F5FFA")("=== by Piotr Kołodziejczyk (Front Flex) ==="));
-});
+const { program } = require("commander");
+
+program
+    .argument("<name>")
+    .option("-j, --jsx", "Create .jsx file instead .tsx")
+    .option("-ns, --no-style", "Don't create file for style")
+    .action((name, options, command) => {
+        if (options.jsx) {
+            console.log("CREATE JSX FILE");
+        }
+        console.log(1, command.name());
+        console.log(2, name);
+    });
+
+program.parse();
+
+const options = program.args;
+console.log(options);
+
+displayRcliLogo();
