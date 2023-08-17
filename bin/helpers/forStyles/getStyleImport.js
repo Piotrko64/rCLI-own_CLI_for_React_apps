@@ -1,4 +1,8 @@
-function getStyleImport({ fileName, styleMode, isModule = true, isTs = true }) {
+function getStyleImport({ fileName, styleMode, isModule = true, isTs = true, isStyle }) {
+    if (!isStyle) {
+        return "";
+    }
+
     const styleName = fileName[0].toLowerCase() + fileName.slice(1);
     if (!isModule) {
         return `import './${styleName}.${styleMode}'`;

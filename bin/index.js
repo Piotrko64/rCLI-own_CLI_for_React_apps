@@ -8,6 +8,7 @@ const { getStyleMode } = require("./helpers/forStyles/getStyleMode");
 program
     .argument("<pathFile>")
     .option("-j, --jsx", "Create .jsx file instead .tsx")
+    .option("-t, --tsx", "Create .tsx file - default bahavior")
     .option("-ns, --no-style", "Don't create file for style")
     .option("-nm, --no-module", "Create style file without module (for example .css instead .module.css)")
     .option("-sc, --scss", "Create .module.scss or .scss file instead .css")
