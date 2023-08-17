@@ -1,10 +1,7 @@
 #! /usr/bin/env node
 
 const { displayRcliLogo } = require("./helpers/displayRcliLogo");
-const { getFileName } = require("./helpers/getFileName");
-const { createTSXComponent } = require("./helpers/componentsWithStyles/createTSXComponent");
-const { templateJSXFile } = require("./templates/templateJSXFile");
-
+const { createComponent } = require("./helpers/componentsWithStyles/createComponent");
 const { program } = require("commander");
 const { getStyleMode } = require("./helpers/forStyles/getStyleMode");
 
@@ -18,14 +15,9 @@ program
     // .option("-sa, --sass", "Create .module.sass or .sass file instead .css")
     .option("-sty, --styled-components", "Create styled components file for style")
     .option("-h, --hook", "Create also file for hook")
-    .option("-ws, --without-style", "Don't create file for style")
-    .action((path, options, command) => {
-        console.log(options.hook);
-        createTSXComponent(path, getStyleMode(options), options.hook);
+    .action((path, options) => {
+        createComponent(path, getStyleMode(options), options.hook, options.style);
     });
 program.parse();
-
-const options = program.args;
-console.log(options);
 
 displayRcliLogo();

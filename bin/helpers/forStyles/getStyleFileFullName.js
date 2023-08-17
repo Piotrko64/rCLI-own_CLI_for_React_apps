@@ -1,4 +1,4 @@
-const { getFileName } = require("../getFileName");
+const { getFileName } = require("../getFileNameFromPath");
 
 function getStyleFileFullName(pathFile, styleMode, isModule, isTS = true) {
     if (styleMode === "styledComponents") {
