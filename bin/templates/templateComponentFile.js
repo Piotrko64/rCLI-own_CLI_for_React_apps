@@ -1,6 +1,6 @@
 const { getHookFileName } = require("../helpers/forHook/getHookFileName");
 
-function templateComponentFile({ nameFile, importStyle, isStyledComponents = false, isHook }) {
+function templateComponentFile({ nameFile, importStyle, isStyledComponents = false, isHook, isTs }) {
     if (!isNaN(+nameFile)) {
         throw new Error("Name of component cannot begin at number");
     }
@@ -9,11 +9,11 @@ function templateComponentFile({ nameFile, importStyle, isStyledComponents = fal
 
     return `
 ${importStyle}
-import {${hookName}} from './${hookName}'
+${isHook ? `import {${hookName}} from './${hookName}` : ""}'
 
 export function ${nameFile}(){
 
-const { counter } = ${isHook && hookName}<number>(0)
+const { counter } = ${isHook ? hookName : ""}${isTs ? "<number>" : ""}(0)
 
     return(
         <>

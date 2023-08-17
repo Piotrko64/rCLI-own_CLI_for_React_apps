@@ -7,6 +7,7 @@ const { getStyleMode } = require("./helpers/forStyles/getStyleMode");
 
 program
     .argument("<pathFile>")
+    .usage("rc <pathFile> [options]")
     .option("-j, --jsx", "Create .jsx file instead .tsx")
     .option("-t, --tsx", "Create .tsx file - default bahavior")
     .option("-ns, --no-style", "Don't create file for style")
@@ -16,8 +17,10 @@ program
     .option("-sa, --sass", "Create .module.sass or .sass file instead .css")
     .option("-sty, --styled-components", "Create styled components file for style")
     .option("-h, --hook", "Create also file for hook")
+    .option("-nf, --no-folder", "Create component files without folder")
+
     .action((pathFile, options) => {
-        const { hook, style, module, jsx } = options;
+        const { hook, style, module, jsx, folder } = options;
 
         displayRcliLogo();
 
@@ -28,6 +31,7 @@ program
             isStyleFile: style,
             isModule: module,
             isTs: !jsx,
+            withoutFolder: !folder,
         });
     });
 program.parse();

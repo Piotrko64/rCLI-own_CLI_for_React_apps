@@ -1,4 +1,4 @@
-function getStyleImport({ fileName, styleMode, isModule = true, isTs = true, isStyle }) {
+function getStyleImport({ nameFile: fileName, styleMode, isModule = true, isTs = true, isStyle }) {
     if (!isStyle) {
         return "";
     }

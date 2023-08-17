@@ -4,17 +4,22 @@ const { templateNoStyledComponentsFile } = require("../../templates/templateNoSt
 const { templateStyledComponentsFile } = require("../../templates/templateStyledComponentsFile");
 const { getStyleFileFullName } = require("../forStyles/getStyleFileFullName");
 const chalk = require("chalk");
+const { pathWithoutLastElement } = require("../pathWithoutLastElement");
 
-function createStyleFile({ pathFile, styleMode, isModule, isTs }) {
-    console.log(styleMode);
+function createStyleFile({ pathFile, styleMode, isModule, isTs, withoutFolder }) {
     fse.outputFile(
-        path.join(process.cwd(), pathFile, getStyleFileFullName(pathFile, styleMode, isModule, isTs)),
+        path.join(
+            process.cwd(),
+            pathWithoutLastElement(pathFile, withoutFolder),
+            getStyleFileFullName(pathFile, styleMode, isModule, isTs)
+        ),
         styleMode === "styledComponents"
             ? templateStyledComponentsFile()
             : templateNoStyledComponentsFile(styleMode === "sass"),
         function (err) {
             if (err) throw err;
             console.log(chalk.hex("#DA70D6")(`Style file was created! (${styleMode})`));
+            console.log(chalk.bgGrey(`\nComponent was created without folder`));
         }
     );
 }

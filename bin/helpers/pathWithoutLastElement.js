@@ -1,7 +1,12 @@
-function pathWithoutLastElement(path) {
+function pathWithoutLastElement(path, withoutChange) {
+    if (!withoutChange) {
+        return path;
+    }
+
     const arrayPath = path.split("/");
     arrayPath.pop();
-    return arrayPath.slice(0, -1);
+
+    return arrayPath.join("/");
 }
 
 module.exports = { pathWithoutLastElement };

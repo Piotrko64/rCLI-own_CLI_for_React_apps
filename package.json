@@ -9,10 +9,11 @@
     "author": "Manav Shrivastava",
     "license": "ISC",
     "keywords": [
-        "cli"
+        "cli",
+        "react"
     ],
     "bin": {
-        "rcli": "./bin/index.js"
+        "rc": "./bin/index.js"
     },
     "dependencies": {
         "boxen": "4.2.0",
