@@ -53,4 +53,8 @@ RCli create basic component with hook and style file!
 
 --help display help for command
 
+### Attention
+
+I recommend use also prettier to better format all documents
+
 # Good luck!

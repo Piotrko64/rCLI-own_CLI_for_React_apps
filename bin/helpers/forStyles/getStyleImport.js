@@ -7,7 +7,7 @@ function getStyleImport({ nameFile: fileName, styleMode, isModule = true, isTs =
     if (!isModule && styleMode !== "styledComponents") {
         return `import './${styleName}.${styleMode}'`;
     } else if (styleMode === "styledComponents") {
-        return `import { Example } from './${styleName}.styled.${isTs ? "ts" : "js"}'`;
+        return `import { Example } from "./${styleName}.styled.${isTs ? "ts" : "js"}"`;
     } else {
         return `import styles from './${styleName}.module.${styleMode}'`;
     }

@@ -4,16 +4,15 @@ function templateComponentFile({ nameFile, importStyle, isStyledComponents = fal
     if (!isNaN(+nameFile)) {
         throw new Error("Name of component cannot begin at number");
     }
-
     const hookName = getHookFileName(nameFile);
 
     return `
 ${importStyle}
-${isHook ? `import {${hookName}} from './${hookName}` : ""}'
+${isHook ? `import { ${hookName} } from './${hookName}'` : ""}
 
 export function ${nameFile}(){
 
-const { counter } = ${isHook ? hookName : ""}${isTs ? "<number>" : ""}(0)
+${isHook ? `const { counter } = ${hookName}${isTs ? "<number>" : ""}(0)` : ""}
 
     return(
         <>
