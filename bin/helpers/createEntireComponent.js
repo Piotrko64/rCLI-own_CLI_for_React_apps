@@ -9,6 +9,8 @@ const { getStyleFileFullName } = require("./forStyles/getStyleFileFullName");
 const { getHookFileName } = require("./forHook/getHookFileName");
 const { templateHookFile } = require("../templates/templateHookFile");
 const { createMainFileComponent } = require("./creatingFiles/createMainFileComponent");
+const { createStyleFile } = require("./creatingFiles/createStyleFile");
+const { createHookFile } = require("./creatingFiles/createHookFile");
 
 function createEntireComponent(
     pathFile,
@@ -16,33 +18,16 @@ function createEntireComponent(
     isHook = false,
     isStyleFile = true,
     isFolder = true,
-
-    isModule = true
+    isModule = true,
+    isTs = true
 ) {
-    createMainFileComponent({ pathFile, styleMode });
-
+    createMainFileComponent({ pathFile, styleMode, isTs });
     if (isStyleFile) {
-        fse.outputFile(
-            path.join(process.cwd(), pathFile, getStyleFileFullName(pathFile, styleMode, isModule)),
-            styleMode === "styledComponents"
-                ? templateStyledComponentsFile()
-                : templateNoStyledComponentsFile(),
-            function (err) {
-                if (err) throw err;
-                console.log("Style file was created!");
-            }
-        );
+        createStyleFile({ pathFile, styleMode, isModule });
     }
 
     if (isHook) {
-        fse.outputFile(
-            path.join(process.cwd(), pathFile, getHookFileName(getFileName(pathFile)) + `.tsx`),
-            templateHookFile(fileName),
-            function (err) {
-                if (err) throw err;
-                console.log("Style file was created!");
-            }
-        );
+        createHookFile({ pathFile, isTs });
     }
 }
 module.exports = { createEntireComponent };

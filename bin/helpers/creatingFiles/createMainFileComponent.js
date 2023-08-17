@@ -4,7 +4,7 @@ const { getFileName } = require("../getFileNameFromPath");
 const { templateJSXFile } = require("../../templates/templateJSXFile");
 const { getStyleImport } = require("../forStyles/getStyleImport");
 
-function createMainFileComponent({ pathFile, styleMode }) {
+function createMainFileComponent({ pathFile, styleMode, isTs }) {
     const fileName = getFileName(pathFile);
 
     fse.outputFile(
