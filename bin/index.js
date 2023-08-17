@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
 const { displayRcliLogo } = require("./helpers/displayRcliLogo");
-const { createComponent } = require("./helpers/componentsWithStyles/createComponent");
+const { createEntireComponent } = require("./helpers/createEntireComponent");
 const { program } = require("commander");
 const { getStyleMode } = require("./helpers/forStyles/getStyleMode");
 
@@ -16,7 +16,7 @@ program
     .option("-sty, --styled-components", "Create styled components file for style")
     .option("-h, --hook", "Create also file for hook")
     .action((path, options) => {
-        createComponent(path, getStyleMode(options), options.hook, options.style);
+        createEntireComponent(path, getStyleMode(options), options.hook, options.style);
     });
 program.parse();
 
