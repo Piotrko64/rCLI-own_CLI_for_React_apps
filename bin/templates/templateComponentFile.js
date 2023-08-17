@@ -1,4 +1,8 @@
-function templateJSXFile(nameFile, importStyle, isStyledComponents = false) {
+function templateComponentFile(nameFile, importStyle, isStyledComponents = false) {
+    if (!isNaN(+nameFile)) {
+        throw new Error("Name of component cannot begin at number");
+    }
+
     return `
     ${importStyle}
 
@@ -19,4 +23,4 @@ function templateJSXFile(nameFile, importStyle, isStyledComponents = false) {
     `;
 }
 
-module.exports = { templateJSXFile };
+module.exports = { templateComponentFile };

@@ -1,18 +1,18 @@
 const fse = require("fs-extra");
 const path = require("path");
 const { getFileName } = require("../getFileNameFromPath");
-const { templateJSXFile } = require("../../templates/templateJSXFile");
+const { templateComponentFile } = require("../../templates/templateComponentFile");
 const { getStyleImport } = require("../forStyles/getStyleImport");
 
-function createMainFileComponent({ pathFile, styleMode, isTs }) {
+function createMainFileComponent({ pathFile, styleMode, isModule, isTs }) {
     const fileName = getFileName(pathFile);
 
     fse.outputFile(
-        path.join(process.cwd(), pathFile, `${fileName}.jsx`),
-        templateJSXFile(fileName, getStyleImport(fileName, styleMode)),
+        path.join(process.cwd(), pathFile, `${fileName}.${isTs ? "t" : "j"}sx`),
+        templateComponentFile(fileName, getStyleImport({ fileName, styleMode, isModule, isTs })),
         function (err) {
             if (err) throw err;
-            console.log("JSX file was created!");
+            console.warn("Something get wrong!");
         }
     );
 }

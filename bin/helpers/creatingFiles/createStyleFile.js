@@ -4,9 +4,9 @@ const { templateNoStyledComponentsFile } = require("../../templates/templateNoSt
 const { templateStyledComponentsFile } = require("../../templates/templateStyledComponentsFile");
 const { getStyleFileFullName } = require("../forStyles/getStyleFileFullName");
 
-function createStyleFile({ pathFile, styleMode, isModule }) {
+function createStyleFile({ pathFile, styleMode, isModule, isTs }) {
     fse.outputFile(
-        path.join(process.cwd(), pathFile, getStyleFileFullName(pathFile, styleMode, isModule)),
+        path.join(process.cwd(), pathFile, getStyleFileFullName(pathFile, styleMode, isModule, isTs)),
         styleMode === "styledComponents" ? templateStyledComponentsFile() : templateNoStyledComponentsFile(),
         function (err) {
             if (err) throw err;
