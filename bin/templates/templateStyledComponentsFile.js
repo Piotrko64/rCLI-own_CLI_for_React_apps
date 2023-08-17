@@ -7,7 +7,7 @@ font-size: 1.5em;
 text-align: center;
 color: #BF4F74;
 \`
-    `;
+    `.trim();
 }
 
 module.exports = { templateStyledComponentsFile };

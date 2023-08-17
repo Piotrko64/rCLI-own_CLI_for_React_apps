@@ -26,7 +26,7 @@ ${isHook ? `const { counter } = ${hookName}${isTs ? "<number>" : ""}(0)` : ""}
     )
 }
     
-`;
+`.trim();
 }
 
 module.exports = { templateComponentFile };
