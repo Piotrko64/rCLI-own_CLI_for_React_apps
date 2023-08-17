@@ -20,7 +20,8 @@ program
     .option("-h, --hook", "Create also file for hook")
     .option("-ws, --without-style", "Don't create file for style")
     .action((path, options, command) => {
-        createTSXComponent(path, getStyleMode(options));
+        console.log(options.hook);
+        createTSXComponent(path, getStyleMode(options), options.hook);
     });
 program.parse();
 
