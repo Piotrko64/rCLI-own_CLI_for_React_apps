@@ -15,7 +15,7 @@ function displayRcliLogo() {
                 borderColor: "#0F5FFA",
             })
         );
-        console.log(chalk.hex("#0F5FFA")("=== by Piotr Kołodziejczyk (Front Flex) ==="));
+        console.log(chalk.hex("#0F5FFA")("=== by Piotr Kołodziejczyk (Front Flex) === \n"));
     });
 }
 

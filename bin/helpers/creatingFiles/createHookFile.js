@@ -3,6 +3,7 @@ const path = require("path");
 const { getHookFileName } = require("../forHook/getHookFileName");
 const { getFileName } = require("../getFileNameFromPath");
 const { templateHookFile } = require("../../templates/templateHookFile");
+const chalk = require("chalk");
 
 function createHookFile({ pathFile, isTs = true }) {
     const fileName = getFileName(pathFile);
@@ -13,7 +14,7 @@ function createHookFile({ pathFile, isTs = true }) {
         templateHookFile(fileName),
         function (err) {
             if (err) throw err;
-            console.log("Style file was created!");
+            console.log(chalk.hex("#7F00FF")(`Hook file was created! (${fileHookName})`));
         }
     );
 }
