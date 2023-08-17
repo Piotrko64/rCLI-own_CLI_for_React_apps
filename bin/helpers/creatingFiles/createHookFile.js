@@ -12,7 +12,7 @@ function createHookFile({ pathFile, isTs = true, withoutFolder }) {
 
     fse.outputFile(
         path.join(process.cwd(), pathWithoutLastElement(pathFile, withoutFolder), fileHookName),
-        templateHookFile(fileName),
+        templateHookFile(fileName, isTs),
         function (err) {
             if (err) throw err;
             console.log(chalk.hex("#7F00FF")(`Hook file was created! (${fileHookName})`));

@@ -19,7 +19,7 @@ function createStyleFile({ pathFile, styleMode, isModule, isTs, withoutFolder })
         function (err) {
             if (err) throw err;
             console.log(chalk.hex("#DA70D6")(`Style file was created! (${styleMode})`));
-            console.log(chalk.bgGrey(`\nComponent was created without folder`));
+            withoutFolder && console.log(chalk.bgGrey(`\nComponent was created without folder`));
         }
     );
 }
