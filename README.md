@@ -1,4 +1,4 @@
-# rCLI own CLI for React apps
+# # <p align="center">rCLI own CLI for React apps<p>
 
 <p align="center"> <img src="https://github.com/Piotrko64/rCLI-own_CLI_for_React_apps/assets/77500425/a15eaa56-822f-4e0a-bea6-677d582e5744" title="RCLI" alt="RCLI"/></p>
 <br>
@@ -13,8 +13,11 @@
 
 
 ## Installation
+
 > Clone the repository and then navigate to it.
+
 > Run npm install to install the dependencies.
+
 > Run npm install -g . to install the CLI.
 
 Now You can use rCLI!  
