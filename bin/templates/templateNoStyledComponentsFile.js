@@ -10,6 +10,6 @@ function templateNoStyledComponentsFile(isSass = false) {
     font-size: 2rem;
     padding: 10px;
 }
-    `;
+    `.trim();
 }
 module.exports = { templateNoStyledComponentsFile };
