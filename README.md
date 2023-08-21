@@ -1,4 +1,4 @@
-# <p align="center">rCLI own CLI for React apps<p>
+# <p align="center">rCLI -  CLI for React apps<p>
 
 <p align="center"> <img src="https://github.com/Piotrko64/rCLI-own_CLI_for_React_apps/assets/77500425/a15eaa56-822f-4e0a-bea6-677d582e5744" title="RCLI" alt="RCLI"/></p>
 <br>
@@ -56,5 +56,10 @@ RCli create basic component with hook and style file!
 ### Attention
 
 I recommend use also prettier to better format all documents
+
+### Execution Policies
+<p> If you have problem with about Execution Policies please check this link:
+https://stackoverflow.com/questions/63423584/how-to-fix-error-nodemon-ps1-cannot-be-loaded-because-running-scripts-is-disabl
+</p>
 
 # Good luck!
