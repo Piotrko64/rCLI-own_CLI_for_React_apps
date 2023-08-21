@@ -5,8 +5,6 @@
 <p> I created own CLI for React! It is my react equivalent response for ANGULAR CLI.
 Thanks by rCLI (react CLI) we can create quick components with hook and files for styles (for example .module.css, styled.ts and more!)</p>
 
-<p> <img src="https://github.com/Piotrko64/rCLI-own_CLI_for_React_apps/assets/77500425/fa252993-61c1-4962-97c1-3581332d6829" title="RCLI" alt="RCLI"/></p>
-
 <p>Rcli immetiadely create some basic file with example content! </p>
 
 ## Installation
@@ -43,6 +41,8 @@ Write in console:
 <br>
 
 > rc /ui/amazingButton -h --scss
+
+<p> <img src="https://github.com/Piotrko64/rCLI-own_CLI_for_React_apps/assets/77500425/fa252993-61c1-4962-97c1-3581332d6829" title="RCLI" alt="RCLI"/></p>
 
 Above line create basic component (path: ui/amazingButton) with hook and style (.module.scss) file! Remember Rcli create folders and imports automative!
 
