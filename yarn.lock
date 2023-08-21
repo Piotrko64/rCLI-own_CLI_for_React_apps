@@ -121,6 +121,17 @@
   optionalDependencies:
     "graceful-fs" "^4.1.6"
 
+"rcli-ff@^1.0.0":
+  "integrity" "sha512-uO2mIMBFLunXd1vhyb8YG8EFqB9RMm8rvpunGSXbP8SCqL++UYl7L8dGN6FtjyJFADJtxVu9wwsnfQDrIJIDxw=="
+  "resolved" "https://registry.npmjs.org/rcli-ff/-/rcli-ff-1.0.0.tgz"
+  "version" "1.0.0"
+  dependencies:
+    "boxen" "4.2.0"
+    "chalk" "4.0.0"
+    "commander" "^11.0.0"
+    "figlet" "^1.6.0"
+    "fs-extra" "^11.1.1"
+
 "string-width@^4.0.0", "string-width@^4.1.0":
   "integrity" "sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g=="
   "resolved" "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz"

@@ -1,10 +1,9 @@
-# <p align="center">rCLI -  CLI for React apps<p>
+# rCLI - CLI for React apps
 
 <p align="center"> <img src="https://github.com/Piotrko64/rCLI-own_CLI_for_React_apps/assets/77500425/a15eaa56-822f-4e0a-bea6-677d582e5744" title="RCLI" alt="RCLI"/></p>
-<br>
 
-<p align="center"> I created own CLI for React! It is my react equivalent response for ANGULAR CLI </p>
-<p align="center"> Thanks by rCLI (react CLI) we can create quick components with hook and files for styles (for example .module.css, styled.ts and more!)</p>
+<p align="center"> I created own CLI for React! It is my react equivalent response for ANGULAR CLI.
+Thanks by rCLI (react CLI) we can create quick components with hook and files for styles (for example .module.css, styled.ts and more!)</p>
 
 <p align="center"> <img src="https://github.com/Piotrko64/rCLI-own_CLI_for_React_apps/assets/77500425/fa252993-61c1-4962-97c1-3581332d6829" title="RCLI" alt="RCLI"/></p>
 
@@ -12,7 +11,21 @@
 
 ## Installation
 
-> Clone the repository and then navigate to it.
+-   With yarn
+
+    ```sh
+    yarn global add rcli-ff
+    ```
+
+-   With npm
+
+    ```sh
+    npm install -g rcli-ff
+    ```
+
+### Old way of Installation:
+
+> Clone the repository (https://github.com/Piotrko64/rCLI-own_CLI_for_React_apps.git) and then navigate to it.
 
 > Run npm install to install the dependencies.
 
@@ -58,6 +71,7 @@ RCli create basic component with hook and style file!
 I recommend use also prettier to better format all documents
 
 ### Execution Policies
+
 <p> If you have problem with about Execution Policies please check this link:
 https://stackoverflow.com/questions/63423584/how-to-fix-error-nodemon-ps1-cannot-be-loaded-because-running-scripts-is-disabl
 </p>

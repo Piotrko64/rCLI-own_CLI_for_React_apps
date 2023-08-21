@@ -23,7 +23,6 @@ program
     .option('-nf, --no-folder', 'Create component files without folder')
 
     .action((pathFile, options) => {
-        console.log(options);
         const { hook, style, module, jsx, folder } = options;
 
         displayRcliLogo();
