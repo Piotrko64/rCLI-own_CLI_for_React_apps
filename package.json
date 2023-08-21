@@ -1,5 +1,5 @@
 {
-    "name": "@ff/rcli",
+    "name": "rcli-ff",
     "version": "1.0.1",
     "description": "A CLI tool to translate language in the terminal.",
     "main": "bin/index.js",
