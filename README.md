@@ -7,7 +7,7 @@ Thanks by rCLI (react CLI) we can create quick components with hook and files fo
 
 <p> <img src="https://github.com/Piotrko64/rCLI-own_CLI_for_React_apps/assets/77500425/fa252993-61c1-4962-97c1-3581332d6829" title="RCLI" alt="RCLI"/></p>
 
-<p> I immetiadely create some basic file with example content! </p>
+<p>Rcli immetiadely create some basic file with example content! </p>
 
 ## Installation
 
@@ -37,7 +37,7 @@ Now You can use rCLI!
 
 rc \<path\> [flags]
 
-## For Example:
+### For Example:
 
 Write in console:
 <br>
@@ -77,14 +77,14 @@ Above line create basic component (path: ui/amazingButton) with hook and style (
 ## Key features
 
 -   Create components like in a Angular CLI
--   Created files had correct imports and example using
+-   Created files had correct imports and example uses
 -   We can use css/scss/sass or styled components for a style file
 
-### Attention
+## Attention
 
 I recommend use also prettier to better format all documents
 
-### Execution Policies
+## Execution Policies
 
 <p> If you have problem with about Execution Policies please check this link:
 https://stackoverflow.com/questions/63423584/how-to-fix-error-nodemon-ps1-cannot-be-loaded-because-running-scripts-is-disabl

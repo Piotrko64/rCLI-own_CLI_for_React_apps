@@ -8,7 +8,7 @@ const { getStyleMode } = require('./helpers/forStyles/getStyleMode');
 program
     .argument('<pathFile>')
     .name('rc')
-    .version('1.0.2', '-v, --version', 'output the current version')
+    .version('1.0.3', '-v, --version', 'output the current version')
     .usage('<pathFile> [options]')
     .option('-j, --jsx', 'Create .jsx file instead .tsx')
     .option('-t, --tsx', 'Create .tsx file [DEFAULT]')

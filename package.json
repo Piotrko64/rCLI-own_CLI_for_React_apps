@@ -1,12 +1,9 @@
 {
     "name": "rcli-ff",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "A CLI tool to translate language in the terminal.",
     "main": "bin/index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "Manav Shrivastava",
+    "author": "Piotr Kołodziejczyk (Front Flex)",
     "license": "MIT",
     "keywords": [
         "cli",
