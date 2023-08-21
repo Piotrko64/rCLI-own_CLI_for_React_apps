@@ -1,7 +1,7 @@
 {
     "name": "rcli-ff",
-    "version": "1.0.3",
-    "description": "A CLI tool to translate language in the terminal.",
+    "version": "1.0.4",
+    "description": "React CLI to quick create components",
     "main": "bin/index.js",
     "author": "Piotr Kołodziejczyk (Front Flex)",
     "license": "MIT",
@@ -18,7 +18,6 @@
         "chalk": "4.0.0",
         "commander": "^11.0.0",
         "figlet": "^1.6.0",
-        "fs-extra": "^11.1.1",
-        "rcli-ff": "^1.0.0"
+        "fs-extra": "^11.1.1"
     }
 }
