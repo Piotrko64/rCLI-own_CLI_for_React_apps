@@ -1,6 +1,6 @@
 {
     "name": "rcli-ff",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A CLI tool to translate language in the terminal.",
     "main": "bin/index.js",
     "scripts": {
@@ -10,7 +10,8 @@
     "license": "MIT",
     "keywords": [
         "cli",
-        "react"
+        "react",
+        "react-cli"
     ],
     "bin": {
         "rc": "./bin/index.js"

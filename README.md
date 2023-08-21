@@ -1,13 +1,13 @@
 # rCLI - CLI for React apps
 
-<p align="center"> <img src="https://github.com/Piotrko64/rCLI-own_CLI_for_React_apps/assets/77500425/a15eaa56-822f-4e0a-bea6-677d582e5744" title="RCLI" alt="RCLI"/></p>
+<img src="https://github.com/Piotrko64/rCLI-own_CLI_for_React_apps/assets/77500425/a15eaa56-822f-4e0a-bea6-677d582e5744" title="RCLI" alt="RCLI"/>
 
-<p align="center"> I created own CLI for React! It is my react equivalent response for ANGULAR CLI.
+<p> I created own CLI for React! It is my react equivalent response for ANGULAR CLI.
 Thanks by rCLI (react CLI) we can create quick components with hook and files for styles (for example .module.css, styled.ts and more!)</p>
 
-<p align="center"> <img src="https://github.com/Piotrko64/rCLI-own_CLI_for_React_apps/assets/77500425/fa252993-61c1-4962-97c1-3581332d6829" title="RCLI" alt="RCLI"/></p>
+<p> <img src="https://github.com/Piotrko64/rCLI-own_CLI_for_React_apps/assets/77500425/fa252993-61c1-4962-97c1-3581332d6829" title="RCLI" alt="RCLI"/></p>
 
-<p align="center"> I immetiadely create some basic file with example content! </p>
+<p> I immetiadely create some basic file with example content! </p>
 
 ## Installation
 
@@ -33,12 +33,18 @@ Thanks by rCLI (react CLI) we can create quick components with hook and files fo
 
 Now You can use rCLI!
 
-### For Example:
+## How to use? This is syntax:
 
-Write in console rc /ui/amazingButton -h --scss
-RCli create basic component with hook and style file!
+rc \<path\> [flags]
 
+## For Example:
+
+Write in console:
 <br>
+
+> rc /ui/amazingButton -h --scss
+
+Above line create basic component (path: ui/amazingButton) with hook and style (.module.scss) file! Remember Rcli create folders and imports automative!
 
 ## Options:
 
@@ -64,7 +70,15 @@ RCli create basic component with hook and style file!
 
 -nf, --no-folder Create component files without folder
 
+-v, --version output the current version
+
 --help display help for command
+
+## Key features
+
+-   Create components like in a Angular CLI
+-   Created files had correct imports and example using
+-   We can use css/scss/sass or styled components for a style file
 
 ### Attention
 
