@@ -1,10 +1,12 @@
 const { getFileName } = require("../getFileNameFromPath");
 
-function getStyleFileFullName(pathFile, styleMode, isModule, isTs = true) {
+function getStyleFileFullName({ pathFile, styleMode, isModule = true, isTs = true }) {
+    const fileName = getFileName(pathFile)[0].toLowerCase() + getFileName(pathFile).slice(1);
+
     if (styleMode === "styledComponents") {
-        return `${getFileName(pathFile)}.styled.${isTs ? "ts" : "js"}`;
+        return `${fileName}.styled.${isTs ? "ts" : "js"}`;
     } else {
-        return `${getFileName(pathFile)}${isModule ? ".module" : ""}.${styleMode}`;
+        return `${fileName}${isModule ? ".module" : ""}.${styleMode}`;
     }
 }
 

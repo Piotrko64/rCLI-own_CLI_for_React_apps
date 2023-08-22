@@ -10,15 +10,19 @@ function createStyleFile({ pathFile, styleMode, isModule, isTs, withoutFolder })
     fse.outputFile(
         path.join(
             process.cwd(),
-            pathWithoutLastElement(pathFile, withoutFolder),
-            getStyleFileFullName(pathFile, styleMode, isModule, isTs)
+            pathWithoutLastElement(pathFile, !withoutFolder),
+            getStyleFileFullName({ pathFile, styleMode, isModule, isTs })
         ),
         styleMode === "styledComponents"
             ? templateStyledComponentsFile()
             : templateNoStyledComponentsFile(styleMode === "sass"),
         function (err) {
             if (err) throw err;
-            console.log(chalk.hex("#DA70D6")(`Style file was created! (${styleMode})`));
+            console.log(
+                chalk.hex("#DA70D6")(
+                    `Style file was created! (${getStyleFileFullName({ pathFile, styleMode, isModule, isTs })})`
+                )
+            );
             withoutFolder && console.log(chalk.bgGrey(`\nComponent was created without folder`));
         }
     );

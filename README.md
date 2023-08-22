@@ -40,7 +40,9 @@ rc \<path\> [flags]
 Write in console:
 <br>
 
-> rc /ui/amazingButton -h --scss
+```sh
+rc /ui/amazingButton -h --scss
+```
 
 <p> <img src="https://github.com/Piotrko64/rCLI-own_CLI_for_React_apps/assets/77500425/fa252993-61c1-4962-97c1-3581332d6829" title="RCLI" alt="RCLI"/></p>
 

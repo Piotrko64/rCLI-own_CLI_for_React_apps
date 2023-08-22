@@ -5,6 +5,9 @@
     "main": "bin/index.js",
     "author": "Piotr Kołodziejczyk (Front Flex)",
     "license": "MIT",
+    "scripts": {
+        "test": "vitest"
+    },
     "keywords": [
         "cli",
         "react",
@@ -24,5 +27,8 @@
         "commander": "^11.0.0",
         "figlet": "^1.6.0",
         "fs-extra": "^11.1.1"
+    },
+    "devDependencies": {
+        "vitest": "^0.34.2"
     }
 }

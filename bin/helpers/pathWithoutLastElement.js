@@ -1,5 +1,5 @@
-function pathWithoutLastElement(path, withoutChange) {
-    if (!withoutChange) {
+function pathWithoutLastElement(path, withoutChange = false) {
+    if (withoutChange) {
         return path;
     }
 

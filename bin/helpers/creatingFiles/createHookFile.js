@@ -11,7 +11,7 @@ function createHookFile({ pathFile, isTs = true, withoutFolder }) {
     const fileHookName = getHookFileName(getFileName(pathFile)) + `${isTs ? ".tsx" : ".jsx"}`;
 
     fse.outputFile(
-        path.join(process.cwd(), pathWithoutLastElement(pathFile, withoutFolder), fileHookName),
+        path.join(process.cwd(), pathWithoutLastElement(pathFile, !withoutFolder), fileHookName),
         templateHookFile(fileName, isTs),
         function (err) {
             if (err) throw err;

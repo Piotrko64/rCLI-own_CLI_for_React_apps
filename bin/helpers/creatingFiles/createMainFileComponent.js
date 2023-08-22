@@ -6,20 +6,12 @@ const { getStyleImport } = require("../forStyles/getStyleImport");
 const chalk = require("chalk");
 const { pathWithoutLastElement } = require("../pathWithoutLastElement");
 
-function createMainFileComponent({
-    pathFile,
-    styleMode,
-    isModule,
-    isTs,
-    isStyleFile: isStyle,
-    isHook,
-    withoutFolder,
-}) {
+function createMainFileComponent({ pathFile, styleMode, isModule, isTs, isStyleFile: isStyle, isHook, withoutFolder }) {
     const nameFile = getFileName(pathFile)[0].toUpperCase() + getFileName(pathFile).slice(1);
     const extension = `${isTs ? "t" : "j"}sx`;
 
     fse.outputFile(
-        path.join(process.cwd(), pathWithoutLastElement(pathFile, withoutFolder), `${nameFile}.${extension}`),
+        path.join(process.cwd(), pathWithoutLastElement(pathFile, !withoutFolder), `${nameFile}.${extension}`),
         templateComponentFile({
             nameFile,
             isHook,
@@ -28,9 +20,7 @@ function createMainFileComponent({
         }),
         function (err) {
             if (err) throw err;
-            console.log(
-                chalk.hex("#FFAE42")(`${extension} main file was created! (${nameFile}.${extension})`)
-            );
+            console.log(chalk.hex("#FFAE42")(`${extension} main file was created! (${nameFile}.${extension})`));
         }
     );
 }
