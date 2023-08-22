@@ -1,6 +1,6 @@
 {
     "name": "rcli-ff",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "React CLI to quick create components",
     "main": "bin/index.js",
     "author": "Piotr Kołodziejczyk (Front Flex)",
@@ -12,6 +12,11 @@
     ],
     "bin": {
         "rc": "./bin/index.js"
+    },
+    "homepage": "https://github.com/Piotrko64/rCLI-own_CLI_for_React_apps",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Piotrko64/rCLI-own_CLI_for_React_apps.git"
     },
     "dependencies": {
         "boxen": "4.2.0",
